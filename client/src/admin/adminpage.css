@@ -1,0 +1,900 @@
+/* Admin Navbar Layout */
+.admin-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.admin-navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  margin: 0;
+}
+
+.admin-nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.admin-nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.admin-nav-links a:hover {
+  background-color: #1abc9c;
+}
+
+.admin-nav-links .active-link {
+  background-color: #1abc9c;
+  font-weight: bold;
+}
+
+/* Adjusted content area (no sidebar offset) */
+.admin-content {
+  margin-left: 0;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Search Bar */
+.search-books {
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-books h3 {
+  font-size: 18px;
+  color: #3055b9;
+}
+
+.search input {
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+.search button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #20ac27a1;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.search button:hover {
+  background-color: chartreuse;
+}
+
+/* Book List Page */
+.booklist-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.booklist-header-highlight {
+  color: #f39c12;
+}
+
+/* Position the dropdown to the top-right corner */
+.booklist-genre-dropdown {
+  position: absolute;
+  top: 20px; /* Adjust for the desired top distance */
+  right: 20px; /* Adjust for the desired right distance */
+}
+
+.booklist-dropdown-button {
+  background-color: #305cd4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 3em;
+}
+
+.booklist-dropdown-button:hover {
+  background-color: #234ba8;
+}
+
+/* Dropdown Menu */
+.booklist-dropdown-menu {
+  position: absolute;
+  top: 40px; /* Adjust based on button size */
+  right: 0;
+  background-color: #fff;
+  color: #444;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  margin-top: 3em;
+}
+
+.booklist-dropdown-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.booklist-dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.booklist-dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Search Section */
+.booklist-search-section {
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.booklist-search-section h3 {
+  font-size: 18px;
+  color: #3055b9;
+}
+
+.booklist-search-input-container {
+  margin-top: 20px;
+}
+
+.booklist-search-input {
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+.booklist-books-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* smaller cards */
+  grid-auto-rows: auto;
+  max-height: calc(6 * 250px); /* Approx. 6 rows, each row ~250px high */
+  overflow-y: auto;
+  gap: 20px;
+  padding: 2em 4em;
+  margin-top: 3em;
+  width: 95%;
+}
+
+/* Smaller Book Cards */
+.booklist-book-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  transition: box-shadow 0.3s;
+  height: auto; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow: hidden;          
+  text-overflow: ellipsis;   
+  white-space: normal;       
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.booklist-book-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Smaller Image */
+.booklist-book-image {
+  margin-top: 20px;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.booklist-genre-footer {
+  font-size: 0.7rem;
+  color: #305cd4;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 3em;
+}
+
+/* Smaller Text */
+.booklist-book-details h4 {
+  font-size: 1rem;
+  color: #071a46;
+  margin: 0.3em 0;
+}
+
+.booklist-book-details p {
+  font-size: 0.75rem;
+  color: #555;
+  margin: 0.2em 0;
+}
+
+.booklist-book-description {
+  font-size: 0.7rem;
+  color: #888;
+  font-style: italic;
+}
+.booklist-book-details h4,
+.booklist-book-details p,
+.booklist-book-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  max-height: 3.5em; /* Limit height to keep it neat */
+}
+
+
+/* Dropdown Menu */
+.dropdown-menu-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.dropdown-btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.dropdown-btn:hover {
+  background-color: #234ba8;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  color: #444;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+/* No Books Message */
+.no-books-message {
+  font-size: 16px;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Admin Dashboard Styles */
+
+/* Main Container for Dashboard */
+.admin-dashboard {
+  background-color: #ffffff; /* Light gray background for clean look */
+  font-family: 'Roboto', sans-serif; /* Clean and professional font */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  height: 100vh; /* Ensure it fills the viewport height */
+}
+
+/* Dashboard Header */
+.admin-dashboard h2 {
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #2c3e50; /* Dark color for the header */
+  font-weight: 600;
+  text-align: center; /* Center the header */
+}
+
+/* Cards Container */
+.dashboard-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  justify-content: center; /* Center cards horizontally */
+}
+
+/* Individual Dashboard Card Style */
+.dashboard-card {
+  background-color: #fff; /* White background */
+  border-radius: 15px; /* More rounded edges */
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 280px; /* Fixed width for consistency */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover Effect on Cards */
+.dashboard-card:hover {
+  transform: translateY(-5px); /* Subtle upward shift */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Title and Value Styling in Dashboard Cards */
+.dashboard-card h3 {
+  font-size: 1.2rem;
+  color: #34495e; /* Dark title color */
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p {
+  font-size: 32px; /* Larger number for emphasis */
+  font-weight: 700;
+  color: #27ae60; /* Green color for numbers */
+}
+
+/* Optional Section for Additional Content */
+.dashboard-welcome {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #3498db; /* Professional blue color */
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+/* Description Section Below Welcome */
+.dashboard-description {
+  font-size: 1rem;
+  color: #7f8c8d; /* Softer gray for description */
+  margin-top: 20px;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px; /* Ensure text doesn't touch screen edges */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .dashboard-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-card {
+    width: 90%; /* Full width on smaller screens */
+    margin-bottom: 20px;
+  }
+}
+
+
+.add-book-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.add-book-form h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #071a46;
+  margin-bottom: 20px;
+}
+
+.status-message {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #e74c3c;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+}
+
+
+form textarea {
+  resize: vertical;
+}
+
+form input[type="file"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.preview-img {
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+form button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  background-color: #305cd4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #234ba8;
+}
+
+@media (max-width: 768px) {
+  .add-book-form {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .add-book-form h2 {
+    font-size: 1.6rem;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  form input, form textarea {
+    font-size: 0.9rem;
+  }
+}
+.delete-book-button {
+  background: transparent;
+  border: none;
+  color: rgb(88, 34, 34);
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.booklist-book-card {
+  position: relative;
+  /* existing styles */
+}
+/* Modal overlay to cover the entire screen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears on top of other content */
+}
+
+/* Modal content box */
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+/* Modal button styles */
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm {
+  background-color: red;
+  color: white;
+}
+
+.cancel {
+  background-color: gray;
+  color: white;
+}
+
+/* AddPage.css */
+
+/* AddPage.css */
+
+/* General container */
+.add-page-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.add-page-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Added pages section */
+.added-pages {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+/* Individual page container */
+.page-container {
+  margin-bottom: 15px;
+}
+
+/* Textarea for content */
+.page-container textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 650px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.page-container textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Add page button */
+.add-page-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.add-page-button:hover {
+  opacity: 0.9;
+}
+
+/* Navigation buttons container */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+/* Back button */
+.navigation-buttons button:nth-of-type(1) {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+/* Done button */
+.navigation-buttons button:nth-of-type(2) {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Button hover states */
+.navigation-buttons button:nth-of-type(1):hover {
+  background-color: #e0e0e0;
+}
+
+.navigation-buttons button:nth-of-type(2):hover {
+  background-color: #0056b3;
+}
+
+.ban-users-page {
+  padding: 30px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.users-table th,
+.users-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.users-table th {
+  background-color: #305cd4;
+  color: white;
+}
+
+.ban-user-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ban-user-button:hover {
+  background-color: #c0392b;
+}
+.search-input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Wrapper that holds the background and centers the card for Admin Sign In */
+.admin-signin-wrapper {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers content vertically and horizontally */
+  background-color: rgb(126, 74, 74);
+}
+
+/* The card (form container) with blurred content inside */
+.admin-signin-form {
+  width: 400px; /* Set card width */
+  height: 500px; /* Set card height */
+  padding: 2em; /* Adjust padding inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center;
+  border-radius: 14px; /* Rounded corners */
+  background-color: rgba(65, 60, 60, 0.3); /* Light background with some transparency */
+  backdrop-filter: blur(10px); /* Blur effect applied to the card content */
+  -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional shadow to give depth */
+  overflow: hidden; /* Ensures no content overflows */
+  color: white; /* Text color */
+}
+
+
+/* Heading styling for Admin Sign In */
+.admin-signin-form h2 {
+  font-size: 28px;
+  margin-bottom: 2em; /* Reduced margin for better spacing */
+  text-align: center;
+  color: #fff; /* Ensure text is white */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Input field styling for Admin Sign In */
+.admin-signin-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1em;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for inputs */
+  color: #333; /* Dark text inside the input */
+  width: 70%;
+}
+
+/* Input field focus effect */
+.admin-signin-form input:focus {
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: none; /* Disable the transition effect */
+}
+
+/* Button styling for Admin Sign In */
+.admin-signin-form button {
+  margin-top: 2em;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(197, 6, 6);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: none; /* Disable button hover animation */
+}
+
+/* Button hover effect for Admin Sign In */
+.admin-signin-form button:hover {
+  background-color: rgb(170, 56, 56);
+  transform: none; /* Remove scale effect on hover */
+}
+
+/* Remove transition for the card */
+.admin-signin {
+  transition: none; /* Disable any transition effects for the card */
+}
+
+/* Remove hover effect on the card */
+.admin-signin:hover {
+  transform: none; /* Ensure no scaling or hover effect */
+}
+
+/* Styling for the Sign Up link */
+.admin-signin a {
+  color: rgb(35, 93, 131);
+}
+.edit-book-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.edit-book-button:hover{
+  background-color: #3e8e41;
+}
+
+/* General styles for the Edit Book Pages page */
+.edit-pages-form {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-pages-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+/* Style for Add Page Button */
+button.add-page-button {
+  margin-top: 20px;
+}
+
+/* Container for form buttons */
+.edit-pages-form .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Styling for the loading state */
+.edit-pages-form .loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}

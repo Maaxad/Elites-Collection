@@ -1,0 +1,61 @@
+.view-book-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .view-book-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .view-book-container h3 {
+    font-size: 1.5em;
+    color: #555;
+  }
+  
+  .view-book-container p {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .book-pages {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .page-content {
+    font-size: 1.2em;
+    white-space: pre-wrap;  /* Ensure page content with line breaks appears correctly */
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

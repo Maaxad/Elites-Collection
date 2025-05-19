@@ -1,0 +1,116 @@
+/* Wrapper that holds the background and centers the card */
+.signup-wrapper {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers content vertically and horizontally */
+    background-color: rgb(84, 183, 248);
+  }
+  
+  /* The card (form container) with blurred content inside */
+  .signup {
+    width: 400px; /* Set card width */
+    height: 500px; /* Set card height */
+    padding: 2em; /* Adjust padding inside the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center;
+    border-radius: 14px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.3); /* Light background with some transparency */
+    backdrop-filter: blur(10px); /* Blur effect applied to the card content */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional shadow to give depth */
+    overflow: hidden; /* Ensures no content overflows */
+    color: white; /* Text color */
+  }
+  
+  /* Form styling */
+  .signup form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Heading styling */
+  .signup h2 {
+    font-size: 28px;
+    margin-bottom: 1.5em; /* Reduced margin for better spacing */
+    text-align: center;
+    color: #fff; /* Ensure text is white */
+  }
+  
+  /* Input field styling */
+  .signup input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1em;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for inputs */
+    color: #333; /* Dark text inside the input */
+  }
+  
+  /* Input field focus effect */
+  .signup input:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: none; /* Disable the transition effect */
+  }
+  
+  /* Button styling */
+  .signup button {
+    margin-top: 2em;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(57, 108, 141);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: none; /* Disable button hover animation */
+  }
+  
+  /* Button hover effect */
+  .signup button:hover {
+    background-color: rgb(105, 153, 185);
+    transform: none; /* Remove scale effect on hover */
+  }
+  
+  /* Remove transition for the card */
+  .signup {
+    transition: none; /* Disable any transition effects for the card */
+  }
+  
+  /* Remove hover effect on the card */
+  .signup:hover {
+    transform: none; /* Ensure no scaling or hover effect */
+  }
+  
+  /* Additional small spacing for text */
+  .signup p {
+    margin-top: 1em;
+    font-size: 14px;
+    text-align: center;
+    color: #fff; /* Text color */
+  }
+  
+  /* Link styling */
+  .signup a {
+    color: rgb(68, 120, 155);
+  }
+  .signup select {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+  }
+  
+  /* Focus effect for dropdown */
+  .signup select:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }

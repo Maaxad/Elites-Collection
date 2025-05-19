@@ -1,0 +1,110 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4em;
+    background-color: rgba(255, 255, 255, 0.7); /* transparent white with slight opacity */
+    border-bottom: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    position: fixed;  /* Fixes navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures it stays on top of content */
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .logo h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .homenav {
+    display: flex;
+    gap: 2rem;
+    font-size: 18px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #0077cc;
+  }
+  .content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
+    position: relative;
+    background-image: url('./assets/homeman.jpeg');
+    background-size: cover;  /* Makes the image cover the full width and height */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  .content, .about-us, .contactus {
+    margin-bottom: 1rem; /* Adds space between sections */
+  }
+  .content h1,
+  .content p,
+  .content button {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .content h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-top: 2em;
+  }
+  
+  .content p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 2em;
+  }
+  
+  .content button {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 2em auto 0;
+    padding: 0.6em 1.5em;
+    background-color: rgb(30, 255, 0);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .content button:hover {
+    background-color: rgb(132, 224, 132);
+    transform: scale(1.05);
+  }
+  .content a{
+    text-decoration: none;
+  }
+  .content a:hover{
+    text-decoration: underline;
+  }
+
+  
